@@ -644,22 +644,13 @@ document.querySelectorAll('.btn-shuffle').forEach(btn => {
 // ── Google Fonts API ──────────────────────────────────────────
 async function fetchFonts() {
   try {
-    const res = await fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}&sort=popularity`);
-    if (!res.ok) {
-      console.error('API Error:', res.status, res.statusText);
-      return;
-    }
-    const data = await res.json();
-    allFonts = (data.items || []).map(({ family, category, variants }) => ({ family, category, variants }));
+    const res = await fetch('assets/fonts.json');
+    if (!res.ok) throw new Error('Failed to load fonts.json');
+    allFonts = await res.json();
     console.log('Total fonts:', allFonts.length);
-    console.log('serif:',       allFonts.filter(f => f.category === 'serif').length);
-    console.log('sans-serif:',  allFonts.filter(f => f.category === 'sans-serif').length);
-    console.log('display:',     allFonts.filter(f => f.category === 'display').length);
-    console.log('handwriting:', allFonts.filter(f => f.category === 'handwriting').length);
-    console.log('monospace:',   allFonts.filter(f => f.category === 'monospace').length);
     initApp();
   } catch (err) {
-    console.error('Fetch failed:', err);
+    console.error('Error loading fonts:', err);
   }
 }
 
