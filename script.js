@@ -1,6 +1,5 @@
 'use strict';
 
-const API_KEY    = 'AIzaSyDsaPA4BtTWJ9IeuWLGTnFE7Lnduyn9RQE';
 let allFonts     = [];
 let loadedFonts  = new Set();
 
