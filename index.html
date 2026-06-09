@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeCupid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" />
+  <link rel="icon" type="image/svg+xml" href="assets/heart2.svg">
+  <link rel="stylesheet" href="style.css" />
+  <link id="google-fonts-link" rel="stylesheet" href="" />
+</head>
+<body>
+<div class="app-card">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header">
+    <div class="header-brand">
+      <h1 class="logo">TypeCupid</h1>
+      <img class="logo-anim" src="assets/typecupidlogoanimate.gif" alt="" aria-hidden="true" />
+    </div>
+    <!-- Desktop / tablet: action buttons sit in the header -->
+    <div class="header-actions">
+      <button class="btn-action btn-cupid-match" id="btn-cupid-match">
+        Cupid Match
+        <img class="cupid-icon" src="assets/heart2.svg" alt="" width="24" height="24" />
+      </button>
+      <button class="btn-action btn-personality" id="btn-personality">
+        Pick Personality
+        <img src="assets/Mask.svg" alt="" width="20" height="20" />
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ CONTENT AREA ═══ -->
+  <div class="content-area">
+
+    <!-- Preview zone -->
+    <main class="preview-zone">
+
+      <!-- Row 1: Heading -->
+      <div class="preview-row" data-level="heading">
+        <p class="preview-text preview-heading">
+          Alice's Adventures in Wonderland
+        </p>
+        <div class="row-controls">
+          <button class="btn-icon btn-lock" aria-label="Lock heading font" data-zone="heading">
+            <img class="lock-icon" src="assets/Lockopen.svg" alt="" />
+          </button>
+          <button class="btn-icon btn-shuffle" aria-label="Reload heading font" data-zone="heading">
+            <img src="assets/Reload.svg" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Row 2: Subheading -->
+      <div class="preview-row" data-level="subheading">
+        <p class="preview-text preview-subheading">
+          Down the Rabbit-Hole
+        </p>
+        <div class="row-controls">
+          <button class="btn-icon btn-lock" aria-label="Lock subheading font" data-zone="subheading">
+            <img class="lock-icon" src="assets/Lockopen.svg" alt="" />
+          </button>
+          <button class="btn-icon btn-shuffle" aria-label="Reload subheading font" data-zone="subheading">
+            <img src="assets/Reload.svg" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Row 3: Body -->
+      <div class="preview-row preview-row--body" data-level="body">
+        <div class="preview-body-content">
+          <p class="preview-text preview-body">
+            Down, down, down. Would the fall never come to an end? "I wonder how many miles I've fallen by this time?" she said aloud. "I must be getting somewhere near the centre of the earth. Let me see: that would be four thousand miles down, I think—" (for, you see, Alice had learnt several things of this sort in her lessons in the schoolroom, and though this was not a very good opportunity for showing off her knowledge, as there was no one to listen to her, still it was good practice to say it over) "—yes, that's about the right distance—but then I wonder what Latitude or Longitude I've got to?" (Alice had no idea what Latitude was, or Longitude either, but thought they were nice grand words to say.)
+          </p>
+        </div>
+        <div class="row-controls">
+          <button class="btn-icon btn-lock" aria-label="Lock body font" data-zone="body">
+            <img class="lock-icon" src="assets/Lockopen.svg" alt="" />
+          </button>
+          <button class="btn-icon btn-shuffle" aria-label="Reload body font" data-zone="body">
+            <img src="assets/Reload.svg" alt="" />
+          </button>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Font panel: tablet / desktop only -->
+    <aside class="font-panel">
+      <div class="font-panel-row" data-level="heading">
+        <button class="font-panel-chip font-chip" id="panel-chip-heading" data-zone="heading">Font name</button>
+        <button class="btn-icon btn-lock" aria-label="Lock heading font" data-zone="heading">
+          <img class="lock-icon" src="assets/Lockopen.svg" alt="" />
+        </button>
+        <button class="btn-icon btn-shuffle" aria-label="Reload heading font" data-zone="heading">
+          <img src="assets/Reload.svg" alt="" />
+        </button>
+      </div>
+      <div class="font-panel-row" data-level="subheading">
+        <button class="font-panel-chip font-chip" id="panel-chip-subheading" data-zone="subheading">Font name</button>
+        <button class="btn-icon btn-lock" aria-label="Lock subheading font" data-zone="subheading">
+          <img class="lock-icon" src="assets/Lockopen.svg" alt="" />
+        </button>
+        <button class="btn-icon btn-shuffle" aria-label="Reload subheading font" data-zone="subheading">
+          <img src="assets/Reload.svg" alt="" />
+        </button>
+      </div>
+      <div class="font-panel-row" data-level="body">
+        <button class="font-panel-chip font-chip" id="panel-chip-body" data-zone="body">Font name</button>
+        <button class="btn-icon btn-lock" aria-label="Lock body font" data-zone="body">
+          <img class="lock-icon" src="assets/Lockopen.svg" alt="" />
+        </button>
+        <button class="btn-icon btn-shuffle" aria-label="Reload body font" data-zone="body">
+          <img src="assets/Reload.svg" alt="" />
+        </button>
+      </div>
+    </aside>
+
+  </div><!-- /.content-area -->
+
+  <!-- ═══ CONTROLS ZONE ═══ -->
+  <footer class="controls-zone">
+
+    <!-- Font chips + navigation arrows (always visible) -->
+    <div class="font-chips-bar">
+      <div class="font-chips">
+        <button class="font-chip" id="chip-heading"    data-zone="heading">Font name</button>
+        <span class="chip-separator">
+          <img src="assets/Heart1.svg" alt="♥" />
+        </span>
+        <button class="font-chip" id="chip-subheading" data-zone="subheading">Font name</button>
+        <span class="chip-separator">
+          <img src="assets/Heart1.svg" alt="♥" />
+        </span>
+        <button class="font-chip" id="chip-body"       data-zone="body">Font name</button>
+      </div>
+      <div class="arrow-group desktop-arrows">
+        <button class="btn-arrow btn-arrow-up" id="btn-arrow-up" aria-label="Previous combination">
+          <img src="assets/Arrowup.svg" alt="↑" />
+        </button>
+        <button class="btn-arrow btn-arrow-down" id="btn-arrow-down" aria-label="Next combination">
+          <img src="assets/Arrowdown.svg" alt="↓" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile-only action buttons -->
+    <div class="mobile-actions">
+      <button class="btn-action btn-cupid-mobile" id="btn-cupid-mobile">
+        Cupid Match
+        <img class="cupid-icon" src="assets/heart2.svg" alt="" width="24" height="24" />
+      </button>
+      <button class="btn-action btn-personality-mobile" id="btn-personality-mobile">
+        Pick Personality
+        <img src="assets/Mask.svg" alt="" width="20" height="20" />
+      </button>
+    </div>
+
+  </footer>
+
+  <!-- ═══ PERSONALITY DROPDOWN ═══ -->
+  <div class="personality-dropdown" id="personality-dropdown" role="dialog" aria-label="Pick a personality">
+    <p class="personality-dropdown__title">What do you want to be?</p>
+    <div class="personality-grid">
+      <button class="personality-pill" data-personality="bold">Bold</button>
+      <button class="personality-pill" data-personality="friendly">Friendly</button>
+      <button class="personality-pill" data-personality="playful">Playful</button>
+      <button class="personality-pill" data-personality="luxurious">Luxurious</button>
+      <button class="personality-pill" data-personality="corporate">Corporate</button>
+      <button class="personality-pill" data-personality="elegant">Elegant</button>
+      <button class="personality-pill" data-personality="techy">Techy</button>
+      <button class="personality-pill" data-personality="artistic">Artistic</button>
+      <button class="personality-pill" data-personality="childlike">Childlike</button>
+      <button class="personality-pill" data-personality="vintage">Vintage</button>
+    </div>
+  </div>
+
+  <!-- ═══ WEIGHT PICKER DROPDOWN ═══ -->
+  <div class="weight-dropdown" id="weight-dropdown" role="dialog" aria-label="Pick font weight">
+    <p class="weight-dropdown__title">Font Weight</p>
+    <div class="weight-grid">
+      <button class="weight-pill" data-weight="700">Bold</button>
+      <button class="weight-pill" data-weight="500">Medium</button>
+      <button class="weight-pill" data-weight="400">Regular</button>
+      <button class="weight-pill" data-weight="300">Light</button>
+    </div>
+  </div>
+
+</div><!-- /.app-card -->
+<script src="script.js"></script>
+</body>
+</html>
